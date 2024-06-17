@@ -63,8 +63,8 @@ const Welcome = () => {
               flexDirection: "column",
             }}
           >
-            <Typography variant={"h3"} sx={{ fontWeight: "bold", mb: 3, color: "#fff"}}>
-              Order delivery near you
+            <Typography variant={"h3"} sx={{ fontWeight: "bold", mb: 3, color: "#000"}}>
+              Welcome to DANACE Dlivery Services
             </Typography>
             <Button
               variant="contained"
@@ -84,7 +84,7 @@ const Welcome = () => {
         <Grid container justifyContent="space-between">
           <Grid item lg={3.8} sx={gridItemStyles}>
             <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-              <LocationOnIcon /> Winneba, South Campus
+              <LocationOnIcon /> Winneba-South Campus
             </Typography>
             <Typography
               my={1}
@@ -107,7 +107,7 @@ const Welcome = () => {
 
           <Grid item lg={3.8} sx={gridItemStyles}>
             <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-              <LocationOnIcon /> Pomadze, Libery Rd
+              <LocationOnIcon /> Pomadze-Libery Rd
             </Typography>
             <Typography
               my={1}
@@ -130,7 +130,7 @@ const Welcome = () => {
 
           <Grid item lg={3.8} sx={gridItemStyles}>
             <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-              <LocationOnIcon /> North Campus
+              <LocationOnIcon /> Winneba-North Campus
             </Typography>
             <Typography
               my={1}
@@ -165,13 +165,13 @@ const Welcome = () => {
           />
           {/* Add markers for the locations */}
           <Marker position={[5.34034, -0.62418]}>
-            <Popup>Winneba, South Campus</Popup>
+            <Popup>Winneba-South Campus</Popup>
           </Marker>
           <Marker position={[5.36034, -0.67428]}>
-            <Popup>Pomadze, Libery Rd</Popup>
+            <Popup>Pomadze-Libery Rd</Popup>
           </Marker>
           <Marker position={[5.34734, -0.7318]}>
-            <Popup>North Campus</Popup>
+            <Popup>Winneba-North Campus</Popup>
           </Marker>
         </MapContainer>
       </Box>
