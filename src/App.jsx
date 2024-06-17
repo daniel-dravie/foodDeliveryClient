@@ -39,7 +39,7 @@ const App = () => {
                   <RequireAuth>
                     <Dashboard />
                   </RequireAuth>
-                }
+                }    
               >
                 <Route index element={<SampFoods />} />
                 <Route path=":categoryID" element={<AllCategoryFoods />} />
