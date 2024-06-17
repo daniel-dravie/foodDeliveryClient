@@ -101,7 +101,7 @@ const Orders = () => {
               {order.orderType === "delivery" ? (
                 <>
                   <Typography variant="body2">
-                    Delivery Guy: {order.deliveryGuy.name}
+                    Deliveryguy: {order.deliveryGuy.name}
                   </Typography>
                   <Typography variant="body2">
                     Contact: {order.deliveryGuy.contact}
@@ -109,7 +109,7 @@ const Orders = () => {
                 </>
               ) : (
                 <>
-                  <Typography variant="body2">Token: {order.token}</Typography>
+                  <Typography variant="body2">Order Token: {order.token}</Typography>
                   <Typography
                     variant="body2"
                     sx={{
@@ -117,7 +117,7 @@ const Orders = () => {
                       fontWeight: "bold",
                     }}
                   >
-                    Claimed: {order.claimed ? "Yes" : "No"}
+                    Delivered: {order.claimed ? "Yes" : "No"}
                   </Typography>
                 </>
               )}

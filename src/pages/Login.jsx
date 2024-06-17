@@ -57,7 +57,16 @@ const Login = () => {
 
   return (
     <>
-      <Container maxWidth="sm" sx={{ height: "95vh" }}>
+      <Container
+        sx={{
+          height: "95vh",
+
+          backgroundImage:
+            'url("https://img.freepik.com/free-photo/ai-generated-pasta_23-2150637282.jpg?t=st=1718571608~exp=1718575208~hmac=8560578dea52c2587c1c34a90b7b910f867a1ec340345224378e11dc89d6405a&w=1060")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <Grid
           container
           spacing={2}
@@ -99,6 +108,7 @@ const Login = () => {
           </Grid>
           <Grid item>
             <TextField
+              sx={{ backgroundColor: "transparent" }}
               size="small"
               label="Password"
               variant="outlined"
@@ -123,9 +133,12 @@ const Login = () => {
           </Grid>
           <Button
             variant="contained"
-            color="primary"
             onClick={handleLogin}
-            sx={{ marginBottom: "10px" }}
+            sx={{
+              marginBottom: "10px",
+              color: "white",
+              backgroundColor: "green",
+            }}
             disabled={loading}
           >
             {loading ? "Logging In..." : "Login"}
@@ -140,13 +153,6 @@ const Login = () => {
           </Snackbar>
         </Grid>
       </Container>
-      <TextField
-        value={count}
-        onChange={(e) => {
-          setCount(e.target.value);
-          console.log(count);
-        }}
-      />
     </>
   );
 };

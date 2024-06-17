@@ -47,14 +47,14 @@ const Welcome = () => {
         >
           <Box
             sx={{
-              height: "90vh",
+              height: "60vh",
               backgroundImage:
                 // 'url("https://img.freepik.com/free-photo/fresh-colourful-ingredients-mexican-cuisine_23-2148254294.jpg?t=st=1717899132~exp=1717902732~hmac=986108276f3bb554e3249a7d57849453a595bd96ee731dddc3a27c38f35a83c0&w=1380")',
                 // 'url("https://img.freepik.com/free-photo/flat-lay-composition-mexican-food-with-copyspace_23-2148140340.jpg?t=st=1717905678~exp=1717909278~hmac=af9a29ed64312a20c4d113005fb15bd0da57c542568f6ac9aa146791eb9252ea&w=996")',
                 // 'url("https://img.freepik.com/free-photo/vegan-food-white-background-with-copy-space_23-2148305769.jpg?t=st=1717905809~exp=1717909409~hmac=aa3a6bc751fe4e97da38f3ce2ae89417688440bab12ea6e03f63378c5d66554c&w=740")',
-                // 'url("https://img.freepik.com/free-photo/delicious-brazilian-food-composition-with-copy-space_23-2148739217.jpg?t=st=1717905866~exp=1717909466~hmac=d92fbecd82f80d850df176094f0db2cc488678bcc6eaf4e92400815cb9fc3eae&w=1380")',
-               // 'linear-gradient(to right, rgba(255,255,255,0), #ffffffe1),url("https://img.freepik.com/free-photo/copy-space-italian-food-ingredients_23-2148551732.jpg?t=st=1717905942~exp=1717909542~hmac=998a46f341815ae1a92cb1c373722e148210a0ba95201f3b7ee8fee488283fbf&w=1380")',
-                'linear-gradient(to right, rgba(255,255,255,0), #fff),url("https://img.freepik.com/free-photo/3d-illustration-senior-chef-with-wooden-spoon-showing-thumbs-up_1057-46150.jpg?t=st=1718541330~exp=1718544930~hmac=b29d54cbd3d83a2275ab1d6faa34fd4dc0c61ba11612f2eb927e42ced51dc2c3&w=740")',
+                //'url("https://img.freepik.com/free-photo/delicious-brazilian-food-composition-with-copy-space_23-2148739217.jpg?t=st=1717905866~exp=1717909466~hmac=d92fbecd82f80d850df176094f0db2cc488678bcc6eaf4e92400815cb9fc3eae&w=1380")',
+                //'url("https://img.freepik.com/free-photo/ai-generated-pasta_23-2150637282.jpg?t=st=1718571608~exp=1718575208~hmac=8560578dea52c2587c1c34a90b7b910f867a1ec340345224378e11dc89d6405a&w=1060")',
+              'linear-gradient(to right, rgba(255,255,255,0), #fff),url("https://img.freepik.com/free-photo/3d-illustration-senior-chef-with-wooden-spoon-showing-thumbs-up_1057-46150.jpg?t=st=1718541330~exp=1718544930~hmac=b29d54cbd3d83a2275ab1d6faa34fd4dc0c61ba11612f2eb927e42ced51dc2c3&w=740")',
               backgroundSize: "cover",
               backgroundPosition: "center",
               display: "flex",
@@ -64,7 +64,10 @@ const Welcome = () => {
             }}
           >
             <Typography variant={"h3"} sx={{ fontWeight: "bold", mb: 3, color: "#000"}}>
-              Welcome to DANACE Dlivery Services
+              Welcome to DANACE
+            </Typography>
+            <Typography variant={"h3"} sx={{ fontWeight: "bold", mb: 3, color: "#000"}}>
+              Dlivery Services
             </Typography>
             <Button
               variant="contained"
