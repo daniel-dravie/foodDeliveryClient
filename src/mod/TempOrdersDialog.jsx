@@ -17,7 +17,9 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Alert from "@mui/material/Alert";
 import ShoppingCart from "@mui/icons-material/ShoppingCart";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion"
+import PaystackPop from "@paystack/inline-js";
+
 import {
   collection,
   getDocs,
@@ -176,7 +178,32 @@ function TempOrdersDialog({ open, onClose, tempOrders, onRemoveOrder }) {
     setExpandedOrderIndex(expandedOrderIndex === index ? null : index);
   };
 
+  const payment = () => {
+    const payStack = new PaystackPop();
+    payStack.newTransaction({
+      key: "pk_live_fdcb343c3c90e4ef0102c32eff474ce65c32bda2",
+      amount: totalPrice * 100,
+      email: "attajnr731@gmail.com",
+      onSuccess: () => handleOrder(),
+      onCancel: () => {
+        setMessage("Payment cancelled");
+        setOpen(true);
+      },
+    });
+  };
+
   const handleOrderTypeClick = (type) => {
+    if (type === "pickup") {
+      // If changing to pickup, reset the selectedLocation and recalculate the totalPrice without the location price
+      setSelectedLocation(null);
+      const newTotalPrice = tempOrders.reduce((total, order, index) => {
+        const quantity = orderQuantities[index];
+        return total + order.totalPrice * quantity;
+      }, 0);
+      setTotalPrice(newTotalPrice);
+    } else {
+      // If changing to delivery, do nothing
+    }
     setOrderType(type);
   };
 
@@ -574,7 +601,7 @@ function TempOrdersDialog({ open, onClose, tempOrders, onRemoveOrder }) {
               },
             }}
             variant="contained"
-            onClick={handleOrder}
+            onClick={payment}
             disabled={orderType === "delivery" && !selectedLocation}
           >
             ORDER

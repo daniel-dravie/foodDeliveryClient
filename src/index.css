@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1rem;
   background: var(--bg);
 }
 
@@ -49,14 +49,14 @@ body {
 }
 
 .swiper_container {
-  height: 40rem;
+  height: 34rem;
   padding: 2rem 0;
   position: relative;
 }
 
 .swiper-slide {
-  width: 24rem;
-  height: 42rem;
+  width: 20rem;
+  height: 26rem;
   position: relative;
 }
 
@@ -77,8 +77,8 @@ body {
 }
 
 .swiper-slide img {
-  width: 24rem;
-  height: 32rem;
+  width: 20rem;
+  height: 26rem;
   border-radius: 2rem;
   box-shadow: 0 0 10px white;
   object-fit: cover;

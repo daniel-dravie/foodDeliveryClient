@@ -64,11 +64,9 @@ const Welcome = () => {
             }}
           >
             <Typography variant={"h3"} sx={{ fontWeight: "bold", mb: 3, color: "#000"}}>
-              Welcome to DANACE
+              Welcome to DANACE Delivery Services
             </Typography>
-            <Typography variant={"h3"} sx={{ fontWeight: "bold", mb: 3, color: "#000"}}>
-              Dlivery Services
-            </Typography>
+            
             <Button
               variant="contained"
               component={Link}

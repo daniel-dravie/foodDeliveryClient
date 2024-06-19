@@ -29,7 +29,7 @@ import { signOut } from "firebase/auth";
 import { AuthContext } from "../context/AuthContext";
 import Avatar from "@mui/material/Avatar";
 
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Account", "Logout"];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -99,6 +99,7 @@ function Navbar() {
           const user = querySnapshot.docs[0];
           const nickName = user.data().nickName;
           setNickName(nickName);
+          localStorage.setItem("nickName", nickName);
         }
       } catch (error) {
         console.log(error);
@@ -185,8 +186,8 @@ function Navbar() {
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href={`/dashboard/${clientID}`}
+              component={Link}
+              to={`/dashboard/${clientID}`}
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -195,7 +196,7 @@ function Navbar() {
                 textDecoration: "none",
               }}
             >
-              DANACE
+              DRACE
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -262,8 +263,8 @@ function Navbar() {
             <Typography
               variant="h5"
               noWrap
-              component="a"
-              href=""
+              component={Link}
+              to={`/dashboard/${clientID}`}
               sx={{
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
@@ -272,7 +273,7 @@ function Navbar() {
                 textDecoration: "none",
               }}
             >
-              DANACE
+              DRACE
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Box
